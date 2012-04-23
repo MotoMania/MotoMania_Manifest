@@ -1,0 +1,49 @@
+Local manifest addon for MotoMania Devices
+	-specifically solana, targa and spyder. droid2, droid2 global, and maserati
+
+Getting Started
+---------------
+
+To get started with Android, you'll need to get
+familiar with [Git and Repo](http://source.android.com/download/using-repo).
+
+Make a build directory:
+
+	mkdir Andoid (or whatever name you choose)
+	cd Android (or the name  you chose)
+
+To initialize your local repository using the MotoMania manifest, use commands like these:
+
+    repo init -u git://github.com/MotoMania/MotoMania_Manifest -b master
+
+Build environment
+
+    ./build/envsetup.sh
+
+Pick phone to build
+
+    lunch
+
+Finally build your phone
+
+    make otapackage
+
+copy files to phone
+     
+     Copy ota   to phone
+     copy gapps to phone
+    
+Finally
+ 
+     reset User/data
+     wipe system
+     wipe dalvic
+
+     load ota zip from sdcard
+     load gapp    from sdcard
+
+     reboot phone
+
+     wait for phone to boot.. may take a couple minutes
+
+     Enjoy 
